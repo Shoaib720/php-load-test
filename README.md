@@ -16,5 +16,8 @@ OPERATION:
 'network' => Network Intensive
 ```
 
+## How to deploy this application
 
-
+```
+docker compose up
+```
