@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:stable-alpine
+    ports:
+      - '8080:80'
+    volumes:
+      - ./:/var/www/html
+      - ./nginx-default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - php_load_test_net
+    depends_on:
+      - php-fpm
+    
+  php-fpm:
+    image: php:8.0.30-fpm-alpine
+    volumes:
+      - ./:/var/www/html
+    networks:
+        - php_load_test_net
+
+networks:
+  php_load_test_net:
+    driver: bridge
