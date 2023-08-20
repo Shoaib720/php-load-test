@@ -9,16 +9,9 @@
 
 <h1>Load Testing application</h1>
 
-<h3>How to use this app:</h3>
+<hr>
 
-Add request parameter "?operation=OPERATION" after url <br><br>
-
-Where: <br>
-
-OPERATION = 'cpu' => CPU intensive workload <br>
-OPERATION = 'memory' => MEMORY intensive workload <br>
-OPERATION = 'disk' => DISK intersive workload <br>
-OPERATION = 'network' => NETWORK intensive workload <br><br><br>
+<h4>Results</h4>
 
 <?php
 if (isset($_GET['operation'])) {
@@ -42,6 +35,13 @@ if (isset($_GET['operation'])) {
     }
 }
 ?>
+
+<hr>
+
+<footer>
+  <h3>Created by: Shoaib S. Shaikh</h3>
+
+</footer>
   
 </body>
 </html>
